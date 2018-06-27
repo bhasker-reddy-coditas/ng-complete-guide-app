@@ -1,0 +1,36 @@
+<div class="row">
+  <div class="col-sm-12">
+    <form (ngSubmit)="addIngredient(f)" #f="ngForm">
+      <div class="row">
+        <div class="col-sm-5 form-group">
+          <label> Name </label>
+          <input type="text" 
+                 id="name" 
+                 name="name"
+                 ngModel
+                 class="form-control"
+                 required
+                 >
+        </div>
+        <div class="col-sm-2 form-group">
+          <label>Amount</label>
+          <input type="number"
+                 id="amount"
+                 name="amount"
+                 ngModel
+                 required
+                 class="form-control">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-12">
+          <button type="submit" 
+          [disabled]="!f.valid"
+          class="btn btn-success mr-3" >{{isEditMode ? 'Update' :'Add'}}</button>
+          <button type="button" *ngIf="isEditMode" class="btn btn-danger mr-3" (click)="deleteItem();">Delete</button>
+          <button type="button" class="btn btn-primary" (click)="clearForm();" >Clear</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

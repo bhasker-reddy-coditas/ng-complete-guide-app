@@ -1,0 +1,13 @@
+<a class="list-group-item clearfix" 
+[routerLink]="[index]"
+routerLinkActive ="active"
+
+><!--  -->
+  <div class="float-left">
+    <h4 class="list-group-item-light">{{recipeItem.name}}</h4>
+    <p class="list-group-item-light"> {{recipeItem.description}}</p>
+  </div>
+  <span class="float-right">
+    <img [src]="recipeItem.imagePath" alt="Image" class="img-fluid" style="max-height: 60px" />
+  </span>
+</a>
