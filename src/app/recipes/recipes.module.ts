@@ -28,5 +28,4 @@ imports:[
 ]
 })
 export class RecipesModule{
-
 }
