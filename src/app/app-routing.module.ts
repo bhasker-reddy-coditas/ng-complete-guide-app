@@ -14,5 +14,4 @@ const appRoutes: Routes = [
     providers :[AuthGaurd]
 })
 export class AppRoutingModule {
-
 }
