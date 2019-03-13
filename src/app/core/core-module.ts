@@ -7,21 +7,25 @@ import { DataService } from "../shared/data.service";
 import { ShoppingListService } from "../shopping-list/shopping-list.service";
 import { RecipeService } from "../recipes/recipe.service";
 import { AuthService } from "../auth/auth.service";
+import { HTTP_INTERCEPTORS } from "@angular/common/http";
+import { Authinterceptor } from "../auth/auth.interceptor";
 
 @NgModule({
     declarations: [
         HeaderComponent,
         HomeComponent
     ],
-    imports:[
+    imports: [
         AppRoutingModule,
         CommonModule
     ],
-    exports:[
+    exports: [
         AppRoutingModule,
         HeaderComponent
     ],
-    providers: [DataService,ShoppingListService,RecipeService,AuthService],
+    providers: [DataService, ShoppingListService, RecipeService, AuthService
+        
+    ],
 })
 export class CoreModule {
 

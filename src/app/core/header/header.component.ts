@@ -29,7 +29,6 @@ export class HeaderComponent {
     }
     onFetchData(){
       const recipes =   this.dataService.fetchData();
-      console.log(recipes);
       /* .subscribe(
             (data: any)=>{
                 console.log(data);
